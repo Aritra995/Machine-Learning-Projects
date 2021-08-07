@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+      html,body {
+        margin:0;
+        padding:0;
+        font-family:Arial;
+      }
+      .form_body {
+        padding: 20px 45px;
+      }
+    </style>
+  </head>
+  <body>
+
+      <nav class="navbar navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Offcanvas navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="form_body">
+      <form id="predict" method="POST">
+        <p>Q1.how often do you cook?</p>
+        <label><input type="radio" name="work_interfere_non_effective_treatment" value="1" checked>Not applicable to him/her</label>
+        <label><input type="radio" name="work_interfere_non_effective_treatment" value="2">Never</label>
+        <label><input type="radio" name="work_interfere_non_effective_treatment" value="3">Rarely</label>
+        <label><input type="radio" name="work_interfere_non_effective_treatment" value="4">Sometimes</label>
+        <label><input type="radio" name="work_interfere_non_effective_treatment" value="5">Often</label>
+        <hr>
+        <p>Q2. frequency of eating out in a typical week</p>
+        <label><input type="radio" name="diagnosed_disorder" value="1" checked>Yes</label>
+        <label><input type="radio" name="diagnosed_disorder" value="2">No</label>
+        <label><input type="radio" name="diagnosed_disorder" value="3">No</label>
+        <label><input type="radio" name="diagnosed_disorder" value="4">No</label>
+        <label><input type="radio" name="diagnosed_disorder" value="5">No</label>
+        <hr>
+        <p>Q3. do you work? </p>
+        <label><input type="radio" name="work_interfere_effective_treatment" value="1" checked>Not applicable to him/her</label>
+        <label><input type="radio" name="work_interfere_effective_treatment" value="2">Never</label>
+        <label><input type="radio" name="work_interfere_effective_treatment" value="3">Rarely</label>
+        <label><input type="radio" name="work_interfere_effective_treatment" value="4">Sometimes</label>
+        <hr>
+        <p>Q4. How likely to eat ethnic food?</p>
+        <label><input type="radio" name="current_disorder" value="1" checked>Yes</label>
+        <label><input type="radio" name="current_disorder" value="2">Maybe</label>
+        <label><input type="radio" name="current_disorder" value="3">No</label>
+        <label><input type="radio" name="current_disorder" value="4">No</label>
+        <label><input type="radio" name="current_disorder" value="5">No</label>
+        <hr>
+        <p>Q5. how often do you exercise in a regular week?</p>
+        <label><input type="radio" name="family_history" value="1" checked>Yes</label>
+        <label><input type="radio" name="family_history" value="2">No</label>
+        <label><input type="radio" name="family_history" value="3">Unsure</label>
+        <label><input type="radio" name="family_history" value="4">Unsure</label>
+        <label><input type="radio" name="family_history" value="5">Unsure</label>
+        <hr>
+        <p>Q6. How likely to eat fruit in a regular day ?</p>
+        <label><input type="radio" name="past_disorder" value="1" checked>Yes</label>
+        <label><input type="radio" name="past_disorder" value="2">Maybe</label>
+        <label><input type="radio" name="past_disorder" value="3">No</label>
+        <label><input type="radio" name="past_disorder" value="4">No</label>
+        <label><input type="radio" name="past_disorder" value="5">No</label>
+        <hr>
+        <p>Q7. income</p>
+        <label><input type="radio" name="care_options" value="1" checked>Yes</label>
+        <label><input type="radio" name="care_options" value="2">No</label>
+        <label><input type="radio" name="care_options" value="3">No</label>
+        <label><input type="radio" name="care_options" value="4">No</label>
+        <label><input type="radio" name="care_options" value="5">No</label>
+        <label><input type="radio" name="care_options" value="6">No</label>
+        <hr>
+        <p>Q8. living situation</p>
+        <label><input type="radio" name="friends_family" value="1" checked>0</label>
+        <label><input type="radio" name="friends_family" value="2">1</label>
+        <label><input type="radio" name="friends_family" value="3">2</label>
+        <label><input type="radio" name="friends_family" value="4">3</label>
+        
+        <hr>
+        <p>Q9. How much would you pay for meal out</p>
+        <label><input type="radio" name="pay_meal_out" value="1" checked>0</label>
+        <label><input type="radio" name="pay_meal_out" value="2">1</label>
+        <label><input type="radio" name="pay_meal_out" value="3">2</label>
+        <label><input type="radio" name="pay_meal_out" value="4">3</label>
+        <label><input type="radio" name="pay_meal_out" value="5">3</label>
+        <label><input type="radio" name="pay_meal_out" value="6">3</label>
+
+        <hr>
+        <p>Q10. do you do any sporting activity?</p>
+        <label><input type="radio" name="sports" value="1" checked>0</label>
+        <label><input type="radio" name="sports" value="2">1</label>
+
+        <hr>
+        <p>Q11. How likely to eat veggies in a day?</p>
+        <label><input type="radio" name="veggies_day" value="1" checked>0</label>
+        <label><input type="radio" name="veggies_day" value="2">1</label>
+        <label><input type="radio" name="veggies_day" value="3">1</label>
+        <label><input type="radio" name="veggies_day" value="4">1</label>
+        <label><input type="radio" name="veggies_day" value="5">1</label>
+
+        <br><br>
+        <input type="submit" value="Predict!">
+    </form>
+  </div>
+    <hr>
+    <!-- <div id="predictionOutcome"></div> -->
+    <script>
+      $("form#predict").submit(function(event) {
+          event.preventDefault();
+          var allElements=event.target.elements;
+          var json={
+            "work_interfere_non_effective_treatment":allElements.work_interfere_non_effective_treatment.value,
+            "diagnosed_disorder":allElements.diagnosed_disorder.value,
+            "work_interfere_effective_treatment":allElements.work_interfere_effective_treatment.value,
+            "current_disorder":allElements.current_disorder.value,
+            "family_history":allElements.family_history.value,
+            "past_disorder":allElements.past_disorder.value,
+            "care_options":allElements.care_options.value,
+            "friends_family":allElements.friends_family.value,
+            "pay_meal_out":allElements.pay_meal_out.value,
+            "sports":allElements.sports.value,
+            "veggies_day":allElements.veggies_day.value
+          }
+          var jsonStr=JSON.stringify(json)
+          // console.log(jsonStr)
+          $.ajax({
+            url: "/api/predict",
+            data: JSON.parse(jsonStr),
+            method: "GET",
+            success: function(result) {
+              // window.location = "/prediction";
+              // url = "/prediction";
+              let html = result;
+              console.log(html);
+              $.ajax({
+                url : "/prediction",
+                method:"GET",
+                success: function(res){
+                  window.location.href = "/prediction";
+                }
+              })
+              // window.location.href = url;
+            },
+            error: function(err) {
+              console.log(err);
+            }
+          });
+          return false
+      });
+    </script>
+  </body>
+</html>
