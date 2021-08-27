@@ -5,151 +5,317 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <title>Accomodation predictor</title>
+    <link rel="shortcut icon" type="image/png" href="https://icon-library.com/images/map_pin_destination_location_adress_house_home-512.png">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       html,body {
         margin:0;
         padding:0;
         font-family:Arial;
+        background-color: #25274d;
       }
       .form_body {
         padding: 20px 45px;
       }
+      .navbar{
+        background-color: #04AA6D;
+        color: white;
+      }
+      .navbar-toggler{
+        width: 47px;
+        height: 34px;
+        background-color: #04AA6D;
+        border:none;
+      }
+      .navbar-toggler > .navbar-toggler-icon{
+        float: right;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 5px;
+      }
+      .navbar-toggler:hover{
+        border:none;
+      }
+      body{
+		    background-color: #25274d;
+	    }
+      .contact{
+        padding: 4%;
+        height: 400px;
+      }
+      .col-md-3{
+        background: #ff9b00;
+        padding: 4%;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+      .contact-info{
+        margin-top:10%;
+      }
+      .contact-info img{
+        margin-bottom: 15%;
+      }
+      .contact-info h2{
+        margin-bottom: 10%;
+      }
+      .col-md-9{
+        background: #fff;
+        padding: 3%;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+      .contact-form label{
+        font-weight:600;
+      }
+      .contact-form button{
+        background: #25274d;
+        color: #fff;
+        font-weight: 600;
+        width: 25%;
+      }
+      .contact-form button:focus{
+        box-shadow:none;
+      }
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
     </style>
   </head>
   <body>
-
-      <nav class="navbar navbar-light bg-light sticky-top">
+    <!-- navbar-light bg-light  -->
+      <nav class="navbar sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Offcanvas navbar</a>
+          <a class="navbar-brand" href="/" style="color: white;"><b>Accomodation Predictor</b></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span> 
+            <span class="navbar-toggler-icon" style="margin-bottom: 0;"></span>
           </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: #04AA6D;">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><b>Pred</b></h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="color: white!important;"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <li class="nav-item" style="padding: 10px;">
+                  <img src="https://icon-library.com/images/map_pin_destination_location_adress_house_home-512.png" alt="Home" style="width: 32px;height: 32px;float: left; margin-right: 5px;">
+                  <a class="nav-link active" aria-current="page" href="/" style="color: white;">Home</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li class="nav-item" style="padding: 10px;">
+                  <img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github" style="width: 32px;height: 32px;float: left; margin-right: 10px;">
+                  <a class="nav-link" href="https://github.com/Aritra995" style="color: white;padding-left: 10px;">Github</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+                <li class="nav-item" style="padding: 10px;">
+                  <img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="LinkedIn" style="width: 32px;height: 32px;float: left;background-color: white;margin-right: 10px;">
+                  <a class="nav-link" href="https://www.linkedin.com/in/aritra-kumar-datta-chaudhury-9a4a7b194/" style="color: white; padding-left: 10px;">LinkedIn</a>
                 </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+              
+              <div style="bottom: 10px;">
+                <b>
+                  <i>"We don't track any of your data. Entering your preferences are completely safe. Happy Pred"</i>
+                </b>
+              </div>
             </div>
           </div>
         </div>
       </nav>
-    <div class="form_body">
-      <form id="predict" method="POST">
-        <p>Q1.how often do you cook?</p>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="1" checked>Not applicable to him/her</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="2">Never</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="3">Rarely</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="4">Sometimes</label>
-        <label><input type="radio" name="work_interfere_non_effective_treatment" value="5">Often</label>
-        <hr>
-        <p>Q2. frequency of eating out in a typical week</p>
-        <label><input type="radio" name="diagnosed_disorder" value="1" checked>Yes</label>
-        <label><input type="radio" name="diagnosed_disorder" value="2">No</label>
-        <label><input type="radio" name="diagnosed_disorder" value="3">No</label>
-        <label><input type="radio" name="diagnosed_disorder" value="4">No</label>
-        <label><input type="radio" name="diagnosed_disorder" value="5">No</label>
-        <hr>
-        <p>Q3. do you work? </p>
-        <label><input type="radio" name="work_interfere_effective_treatment" value="1" checked>Not applicable to him/her</label>
-        <label><input type="radio" name="work_interfere_effective_treatment" value="2">Never</label>
-        <label><input type="radio" name="work_interfere_effective_treatment" value="3">Rarely</label>
-        <label><input type="radio" name="work_interfere_effective_treatment" value="4">Sometimes</label>
-        <hr>
-        <p>Q4. How likely to eat ethnic food?</p>
-        <label><input type="radio" name="current_disorder" value="1" checked>Yes</label>
-        <label><input type="radio" name="current_disorder" value="2">Maybe</label>
-        <label><input type="radio" name="current_disorder" value="3">No</label>
-        <label><input type="radio" name="current_disorder" value="4">No</label>
-        <label><input type="radio" name="current_disorder" value="5">No</label>
-        <hr>
-        <p>Q5. how often do you exercise in a regular week?</p>
-        <label><input type="radio" name="family_history" value="1" checked>Yes</label>
-        <label><input type="radio" name="family_history" value="2">No</label>
-        <label><input type="radio" name="family_history" value="3">Unsure</label>
-        <label><input type="radio" name="family_history" value="4">Unsure</label>
-        <label><input type="radio" name="family_history" value="5">Unsure</label>
-        <hr>
-        <p>Q6. How likely to eat fruit in a regular day ?</p>
-        <label><input type="radio" name="past_disorder" value="1" checked>Yes</label>
-        <label><input type="radio" name="past_disorder" value="2">Maybe</label>
-        <label><input type="radio" name="past_disorder" value="3">No</label>
-        <label><input type="radio" name="past_disorder" value="4">No</label>
-        <label><input type="radio" name="past_disorder" value="5">No</label>
-        <hr>
-        <p>Q7. income</p>
-        <label><input type="radio" name="care_options" value="1" checked>Yes</label>
-        <label><input type="radio" name="care_options" value="2">No</label>
-        <label><input type="radio" name="care_options" value="3">No</label>
-        <label><input type="radio" name="care_options" value="4">No</label>
-        <label><input type="radio" name="care_options" value="5">No</label>
-        <label><input type="radio" name="care_options" value="6">No</label>
-        <hr>
-        <p>Q8. living situation</p>
-        <label><input type="radio" name="friends_family" value="1" checked>0</label>
-        <label><input type="radio" name="friends_family" value="2">1</label>
-        <label><input type="radio" name="friends_family" value="3">2</label>
-        <label><input type="radio" name="friends_family" value="4">3</label>
-        
-        <hr>
-        <p>Q9. How much would you pay for meal out</p>
-        <label><input type="radio" name="pay_meal_out" value="1" checked>0</label>
-        <label><input type="radio" name="pay_meal_out" value="2">1</label>
-        <label><input type="radio" name="pay_meal_out" value="3">2</label>
-        <label><input type="radio" name="pay_meal_out" value="4">3</label>
-        <label><input type="radio" name="pay_meal_out" value="5">3</label>
-        <label><input type="radio" name="pay_meal_out" value="6">3</label>
 
-        <hr>
-        <p>Q10. do you do any sporting activity?</p>
-        <label><input type="radio" name="sports" value="1" checked>0</label>
-        <label><input type="radio" name="sports" value="2">1</label>
+      <div class="container contact">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="contact-info">
+              <img src="https://icon-library.com/images/map_pin_destination_location_adress_house_home-512.png" alt="image" style="width: 64px;height: 64px;"/>
+              <h2>Pred</h2>
+              <h4>We would love to provide Machine Learning Analytics !</h4>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <form action="" class="" method="POST"></form>
+            <!-- <div class="contact-form" id="predict"> -->
+            <form class="contact-form" id="predict" method="POST">
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">How often do you cook?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="work_interfere_non_effective_treatment">
+                    <option value="1" selected>Every day</option>
+                    <option value="2">A couple of times a week</option>
+                    <option value="3">Whenever I can, but that is not very often</option>
+                    <option value="4">I only help a little during holidays</option>
+                    <option value="5">Never, I really do not know my way around a kitchen</option>
+                  </select>
+                </div>
+              </div>
 
-        <hr>
-        <p>Q11. How likely to eat veggies in a day?</p>
-        <label><input type="radio" name="veggies_day" value="1" checked>0</label>
-        <label><input type="radio" name="veggies_day" value="2">1</label>
-        <label><input type="radio" name="veggies_day" value="3">1</label>
-        <label><input type="radio" name="veggies_day" value="4">1</label>
-        <label><input type="radio" name="veggies_day" value="5">1</label>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">Frequency of eating out in a typical week</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="diagnosed_disorder">
+                    <option value="1" selected>Never</option>
+                    <option value="2">1-2 times</option>
+                    <option value="3">2-3 times</option>
+                    <option value="4">3-5 times</option>
+                    <option value="5">every day</option>
+                  </select>
+                </div>
+              </div>
 
-        <br><br>
-        <input type="submit" value="Predict!">
-    </form>
-  </div>
-    <hr>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">Do you work?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="work_interfere_effective_treatment">
+                    <option value="1" selected>yes full time</option>
+                    <option value="2">yes part time</option>
+                    <option value="3">no</option>
+                    <option value="4">other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">How likely to eat ethnic food?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="current_disorder">
+                    <option value="1" selected>very unlikely</option>
+                    <option value="2">unlikely</option>
+                    <option value="3">neutral</option>
+                    <option value="4">likely</option>
+                    <option value="5">very likely</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">How often do you exercise in a regular week?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="family_history">
+                    <option value="1" selected>Everyday</option>
+                    <option value="2">Twice or three times per week</option>
+                    <option value="3">Once a week</option>
+                    <option value="4">Sometimes</option>
+                    <option value="5">Never</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">How likely to eat fruit in a regular day?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="past_disorder">
+                    <option value="1" selected>very unlikely</option>
+                    <option value="2">unlikely</option>
+                    <option value="3">neutral</option>
+                    <option value="4">likely</option>
+                    <option value="5">very likely</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">Income</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="care_options">
+                    <option value="1" selected>less than 15,000</option>
+                    <option value="2">15,001 to 30,000</option>
+                    <option value="3">30,001 to 50,000</option>
+                    <option value="4">50,001 to 70,000</option>
+                    <option value="5">70,001 to 1,00,000</option>
+                    <option value="6">higher than 1,00,000</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">Living situation</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="friends_family">
+                    <option value="1" selected>On campus</option>
+                    <option value="2">Rent out of campus</option>
+                    <option value="3">Live with my parents and commute</option>
+                    <option value="4">Own my own house</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">How much would you pay for meal out?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="pay_meal_out">
+                    <option value="1" selected>up to 350.00</option>
+                    <option value="2">350 to 700 </option>
+                    <option value="3">700 to 1400</option>
+                    <option value="4">1400 to 2100</option>
+                    <option value="5">2100 to 2800</option>
+                    <option value="6">more than 2800</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">Do you do any sporting activity?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="sports">
+                    <option value="1" selected>Yes</option>
+                    <option value="2">No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="fname">How likely to eat veggies in a day?</label>
+                <div class="col-sm-10">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref" name="veggies_day">
+                    <option value="1" selected>very unlikely</option>
+                    <option value="2">unlikely</option>
+                    <option value="3">neutral</option>
+                    <option value="4">likely</option>
+                    <option value="5">very likely</option>
+                  </select>
+                </div>
+              </div>
+              
+             
+              
+              <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" value="Predict!">Submit</button>
+                </div>
+              </div>
+            </form>
+            <!-- </div> //thisone -->
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
     <!-- <div id="predictionOutcome"></div> -->
     <script>
       $("form#predict").submit(function(event) {
           event.preventDefault();
           var allElements=event.target.elements;
           var json={
-            "work_interfere_non_effective_treatment":allElements.work_interfere_non_effective_treatment.value,
             "diagnosed_disorder":allElements.diagnosed_disorder.value,
             "work_interfere_effective_treatment":allElements.work_interfere_effective_treatment.value,
             "current_disorder":allElements.current_disorder.value,
@@ -162,7 +328,6 @@
             "veggies_day":allElements.veggies_day.value
           }
           var jsonStr=JSON.stringify(json)
-          // console.log(jsonStr)
           $.ajax({
             url: "/api/predict",
             data: JSON.parse(jsonStr),
@@ -170,15 +335,55 @@
             success: function(result) {
               // window.location = "/prediction";
               // url = "/prediction";
-              let html = result;
-              console.log(html);
-              $.ajax({
-                url : "/prediction",
-                method:"GET",
-                success: function(res){
-                  window.location.href = "/prediction";
-                }
-              })
+              let cluster = result;
+              var json_auth = {
+                "token" : "authorized"
+              }
+              var jsonStr_auth=JSON.stringify(json_auth)
+              
+
+              if( cluster == "0" ){
+                $.ajax({
+                  url : "/map",
+                  data : JSON.parse(jsonStr_auth),
+                  method:"GET",
+                  success: function(res){
+                    window.location.href = "/map";
+                  }
+                })
+              }
+              if( cluster == "1" ){
+                $.ajax({
+                  url : "/Map",
+                  data : JSON.parse(jsonStr_auth),
+                  method:"GET",
+                  success: function(res){
+                    window.location.href = "/Map";
+                  }
+                })
+              }
+              if( cluster == "2" ){
+                $.ajax({
+                  url : "/mAp",
+                  data : JSON.parse(jsonStr_auth),
+                  method:"GET",
+                  success: function(res){
+                    window.location.href = "/mAp";
+                  }
+                })
+              }
+              if( cluster == "3" ){
+                $.ajax({
+                  url : "/MAP",
+                  data : JSON.parse(jsonStr_auth),
+                  method:"GET",
+                  success: function(res){
+                    window.location.href = "/MAP";
+                  }
+                })
+              }
+              //console.log(html);
+              
               // window.location.href = url;
             },
             error: function(err) {

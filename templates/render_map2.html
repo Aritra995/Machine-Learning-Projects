@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Accomodation predictor</title>
+        <link rel="shortcut icon" type="image/png" href="https://icon-library.com/images/map_pin_destination_location_adress_house_home-512.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .navbar{
+                position: relative;
+            }
+            #map{
+                position: absolute;
+                top: 0.5;
+                width: 100vw;
+                height: 100vh;
+            }
+            html,body {
+              margin:0;
+              padding:0;
+              font-family:Arial;
+              background-color: #25274d;
+            }
+            .form_body {
+              padding: 20px 45px;
+            }
+            .navbar{
+              background-color: #04AA6D;
+              color: white;
+            }
+            .navbar-toggler{
+              width: 47px;
+              height: 34px;
+              background-color: #04AA6D;
+              border:none;
+            }
+            .navbar-toggler > .navbar-toggler-icon{
+              float: right;
+              width: 100%;
+              height: 2px;
+              background-color: #fff;
+              margin-bottom: 5px;
+            }
+            .navbar-toggler:hover{
+              border:none;
+            }
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
+        </style>
+        <script>
+          function clearItems(){
+            sessionStorage.clear();
+          }
+        </script>
+    </head>
+    <body>
+
+      <nav class="navbar sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/" style="color: white;"><b>Accomodation Predictor</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span> 
+            <span class="navbar-toggler-icon" style="margin-bottom: 0;"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: #04AA6D;">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><b>Pred</b></h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="color: white!important;"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item" style="padding: 10px;">
+                  <img src="https://icon-library.com/images/map_pin_destination_location_adress_house_home-512.png" alt="Home" style="width: 32px;height: 32px;float: left; margin-right: 5px;">
+                  <a class="nav-link active" aria-current="page" href="/" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item" style="padding: 10px;">
+                  <img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github" style="width: 32px;height: 32px;float: left; margin-right: 10px;">
+                  <a class="nav-link" href="https://github.com/Aritra995" style="color: white;padding-left: 10px;">Github</a>
+                </li>
+                <li class="nav-item" style="padding: 10px;">
+                  <img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="LinkedIn" style="width: 32px;height: 32px;float: left;background-color: white;margin-right: 10px;">
+                  <a class="nav-link" href="https://www.linkedin.com/in/aritra-kumar-datta-chaudhury-9a4a7b194/" style="color: white; padding-left: 10px;">LinkedIn</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+        
+          
+          <div>
+            <iframe id="map" src="https://firebasestorage.googleapis.com/v0/b/spotify-5a287.appspot.com/o/map2.html?alt=media&token=5b155a14-ecc3-4cab-bce9-bb7604b5e6bd">
+            </iframe>
+          </div>
+         
+    </body>
+</html>
