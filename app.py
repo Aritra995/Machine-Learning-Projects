@@ -1,4 +1,3 @@
-from pickle import STRING
 import requests
 from flask import Flask, render_template, redirect, url_for, request,jsonify
 from werkzeug.wrappers import Request, Response

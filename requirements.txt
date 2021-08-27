@@ -25,6 +25,7 @@ itsdangerous==1.1.0
 jedi==0.18.0
 Jinja2==2.10
 joblib==1.0.0
+json==2.0.9
 jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==6.1.11
@@ -60,14 +61,10 @@ python-dateutil==2.8.1
 python-engineio==4.0.0
 python-socketio==5.0.4
 pytz==2020.5
-pywin32
-pywinpty
-pyzmq
-qtconsole
-QtPy
-scikit-learn
-scipy
-seaborn
+QtPy==1.9.0
+scikit-learn==0.24.2
+scipy==1.7.1
+seaborn==0.11.2
 Send2Trash==1.5.0
 six==1.11.0
 sklearn==0.0
@@ -79,6 +76,7 @@ tqdm==4.55.2
 traitlets==5.0.5
 typing-extensions==3.7.4.3
 wcwidth==0.2.5
+warnings==3.3
 webencodings==0.5.1
 Werkzeug==2.0.1
 widgetsnbextension==3.5.1
