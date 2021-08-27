@@ -1,4 +1,4 @@
-Flask==1.1.2
+Flask==2.0.1
 gunicorn==20.0.4
 argon2-cffi==20.1.0
 async-generator==1.10
@@ -13,7 +13,6 @@ cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
-Flask==1.0.2
 Flask-Login==0.4.1
 Flask-Session==0.3.1
 Flask-SocketIO==5.0.1
@@ -81,6 +80,6 @@ traitlets==5.0.5
 typing-extensions==3.7.4.3
 wcwidth==0.2.5
 webencodings==0.5.1
-Werkzeug==0.14.1
+Werkzeug==2.0.1
 widgetsnbextension==3.5.1
 zipp==3.4.0
