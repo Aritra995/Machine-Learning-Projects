@@ -1,34 +1,17 @@
-import requests
-from flask import Flask, render_template, redirect, url_for, request,jsonify
-from werkzeug.wrappers import Request, Response
+from flask import Flask, render_template,request
 
 import json
-import flask
 # for data loading and transformation
-import numpy as np 
 import pandas as pd
 
 # for statistics output
-from scipy import stats
-from scipy.stats import randint
 
 # for data preparation and preprocessing for model
-from sklearn.model_selection import train_test_split
-from sklearn import preprocessing
-from sklearn.datasets import make_classification
-from sklearn.preprocessing import binarize, LabelEncoder, MinMaxScaler
-
 # model evaluation and validation 
-from sklearn import metrics
 
-from sklearn.metrics import accuracy_score, mean_squared_error, precision_recall_curve
-from sklearn.model_selection import cross_val_score
 
 import joblib
-import matplotlib.pyplot as plt
-import folium
-import random
-import time
+
 
 # to bypass warnings in the jupyter notebook
 import warnings
