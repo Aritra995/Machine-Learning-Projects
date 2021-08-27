@@ -25,7 +25,6 @@ itsdangerous==1.1.0
 jedi==0.18.0
 Jinja2==2.10
 joblib==1.0.0
-json==2.0.9
 jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==6.1.11
@@ -76,7 +75,6 @@ tqdm==4.55.2
 traitlets==5.0.5
 typing-extensions==3.7.4.3
 wcwidth==0.2.5
-warnings==3.3
 webencodings==0.5.1
 Werkzeug==2.0.1
 widgetsnbextension==3.5.1
