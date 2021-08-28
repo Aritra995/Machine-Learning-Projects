@@ -5,3 +5,6 @@ Pred is a machine learning analytics application that predicts probable accomoda
 Go to web-app branch to see the full source code of the application. If you like this application leave a star,fork it in your own repo and see it running in your local environment :)
 ## Check out the Accomodation Predictor-Pred app:
 https://pred-accomodation.herokuapp.com/
+![Pred](https://user-images.githubusercontent.com/59157662/131226203-1a911aca-1427-4dfc-abd1-ac8e42981395.png)
+
+
